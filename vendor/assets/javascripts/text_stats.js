@@ -141,7 +141,16 @@
 		var problemWords = {
 			"simile":		3,
 			"forever":		3,
-			"shoreline":	2
+			"shoreline":	2,
+      "of": 1,
+      "on": 1,
+      "in": 1,
+      "at": 1,
+      "i": 1,
+      "how": 1,
+      "did": 1,
+      "baby": 2,
+      "ever": 2
 		};
 		
 		// Return if we've hit one of those...

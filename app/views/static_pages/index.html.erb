@@ -1,14 +1,18 @@
 <h1>New Haiku</h1>
-
+<div class="haiku-container small-12 medium-8 large-6 small-centered columns text-center">
+<div id="error-display">
+  ERROR
+</div>
 <div class="syllable-count">
 <span id="first-line" class="count">0</span>
 <span id="second-line" class="count">0</span>
 <span id="third-line" class="count">0</span>
-<span id="error-display">
   
-</span>
 </div>
 
-<%= form_tag '/words' do  %>
+<%= form_tag '/haiku' do  %>
   <%= text_area_tag "Haiku Body", nil, rows: 3 %>
+  <%= submit_tag "Submit Haiku", disabled: true, class: "button", id: "haiku-submit" %>
 <% end %>
+
+</div>
