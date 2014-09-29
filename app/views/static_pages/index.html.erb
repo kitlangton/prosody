@@ -1,2 +1,14 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<h1>New Haiku</h1>
+
+<div class="syllable-count">
+<span id="first-line" class="count">0</span>
+<span id="second-line" class="count">0</span>
+<span id="third-line" class="count">0</span>
+<span id="error-display">
+  
+</span>
+</div>
+
+<%= form_tag '/words' do  %>
+  <%= text_area_tag "Haiku Body", nil, rows: 3 %>
+<% end %>
