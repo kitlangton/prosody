@@ -66,17 +66,17 @@ input:disabled {
   transition: all .5s;
   -webkit-transform: rotateX(-20deg); /* Chrome, Safari, Opera */
   transform: rotateX(-20deg);
-  opacity: .8;
+  // opacity: .8;
   .title {
-    opacity: 1;
+    // opacity: 1;
   }
   .body {
     transition: all .5s;
     div:nth-child(2) {
-      opacity: .8;
+      // opacity: .8;
     }
     div:nth-child(3) {
-      opacity: .7;
+      // opacity: .7;
     }
   }
   background: rgb(226,226,226); /* Old browsers */
@@ -91,7 +91,7 @@ input:disabled {
   &:hover {
     .body {
     }
-    opacity: 1;
+    // opacity: 1;
     -webkit-transform: translateY(-20px); /* Chrome, Safari, Opera */
     transform: translateY(-20px);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
