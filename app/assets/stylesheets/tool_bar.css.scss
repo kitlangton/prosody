@@ -1,0 +1,23 @@
+.tool-bar {
+  margin: 40px 0 40px 0;
+
+  }
+
+#new-post-button {
+  color: black;
+  transition: all .2s ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  background-color: rgb(222,222,222);
+  padding: 22px 7px 22px 7px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(232,232,232) ;
+  }
+}
+
