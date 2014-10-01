@@ -48,10 +48,14 @@ input:disabled {
 
 .post {
   position: relative;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   .user-email {
-  
+    display: none;
     position: absolute;
     left: 10px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   .date-created {
     position: absolute;
@@ -72,12 +76,7 @@ input:disabled {
   }
   .body {
     transition: all .5s;
-    div:nth-child(2) {
-      // opacity: .8;
-    }
-    div:nth-child(3) {
-      // opacity: .7;
-    }
+    opacity: .8;
   }
   background: rgb(226,226,226); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 0%, rgba(209,209,209,1) 0%, rgba(254,254,254,1) 100%); /* FF3.6+ */
@@ -90,8 +89,9 @@ input:disabled {
   padding: 10px 0 0px 0;
   &:hover {
     .body {
+    opacity: 1;
     }
-    // opacity: 1;
+    opacity: 1;
     -webkit-transform: translateY(-20px); /* Chrome, Safari, Opera */
     transform: translateY(-20px);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
