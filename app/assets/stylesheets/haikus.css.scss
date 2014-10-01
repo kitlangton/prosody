@@ -67,6 +67,12 @@ input:disabled {
   }
   .body {
     transition: all .5s;
+    div:nth-child(2) {
+      opacity: .8;
+    }
+    div:nth-child(3) {
+      opacity: .7;
+    }
   }
   background: rgb(226,226,226); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 0%, rgba(209,209,209,1) 0%, rgba(254,254,254,1) 100%); /* FF3.6+ */

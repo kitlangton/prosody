@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
   def index
-    @haikus = Haiku.all
+    @haikus = Haiku.all.order("created_at desc")
   end
 end
