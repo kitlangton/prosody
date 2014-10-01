@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930195656) do
+ActiveRecord::Schema.define(version: 20141001151824) do
 
   create_table "haikus", force: true do |t|
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "haikus", ["user_id"], name: "index_haikus_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
