@@ -1,6 +1,8 @@
 
 <div class="row haikus">
-
+  <% @posts.each do |post| %>
+    <%= render 'post', post: post  %>
+  <% end %>
   <% @haikus.each do |haiku| %>
     <%= render 'haiku', haiku: haiku %>
 <% end %>

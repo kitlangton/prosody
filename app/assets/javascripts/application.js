@@ -16,6 +16,7 @@
 //= require text_stats
 //= require turbolinks
 //= require jquery.transit.min.js
+//= require jquery.dotdotdot.min
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

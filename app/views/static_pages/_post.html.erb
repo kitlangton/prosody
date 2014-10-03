@@ -1,0 +1,19 @@
+<div class="medium-6 large-6 columns padded-column">
+
+  <div class="post story">
+    <div class="post-content">
+      <div class="small-12 title">
+        <strong><%= post.title %></strong>
+        <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
+      </div>
+      <div class="body">
+        <% post.body.split("\n")[0..2].each do |line| %>
+          <div>
+          <%= line %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
