@@ -47,8 +47,11 @@ input:disabled {
 
 
 .post {
-  -webkit-font-smoothing: antialiased;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   .user-email {
     display: none;
     position: absolute;
@@ -58,12 +61,16 @@ input:disabled {
     position: absolute;
     right: 10px;
   }
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility:     hidden;  
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s;
   -webkit-transform: rotateX(-20deg); /* Chrome, Safari, Opera */
   transform: rotateX(-20deg);
-  opacity: .9;
+  opacity: .8;
   .title {
     opacity: 1;
   }

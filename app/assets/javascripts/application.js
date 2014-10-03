@@ -15,6 +15,7 @@
 //= require foundation
 //= require text_stats
 //= require turbolinks
+//= require jquery.transit.min.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
