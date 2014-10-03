@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :posts
   resources :haikus
   root 'static_pages#index'
 

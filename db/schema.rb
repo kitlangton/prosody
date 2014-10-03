@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001151824) do
+ActiveRecord::Schema.define(version: 20141003023435) do
 
   create_table "haikus", force: true do |t|
     t.string   "text"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20141001151824) do
   end
 
   add_index "haikus", ["user_id"], name: "index_haikus_on_user_id"
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
