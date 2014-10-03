@@ -3,15 +3,15 @@
   <div class="post story">
     <div class="post-content">
       <div class="small-12 title">
-        <strong><%= post.title %></strong>
+        <%= link_to post do %>
+        <strong class="post-title"><%= post.title %></strong>
+        <% end %>
         <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
       </div>
       <div class="body">
-        <% post.body.split("\n")[0..2].each do |line| %>
           <div>
-          <%= line %>
+            <%= post.body  %>
         </div>
-      <% end %>
       </div>
     </div>
   </div>

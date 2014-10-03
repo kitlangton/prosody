@@ -70,7 +70,7 @@ input:disabled {
   transition: all .5s;
   -webkit-transform: rotateX(-20deg); /* Chrome, Safari, Opera */
   transform: rotateX(-20deg);
-  opacity: .8;
+  opacity: 0;
   .title {
     opacity: 1;
   }

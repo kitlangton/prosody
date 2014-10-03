@@ -1,6 +1,31 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.post-title {
+  text-decoration: none;
+  color: black;
+}
+
+  .show-post-title {
+    transition: color .5s;
+    font-size: 3em;
+    font-weight: bold;
+    height: 80px;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    border: none;
+    text-align: center;
+    resize: none;
+    outline-color: transparent;
+    outline-style: none;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
 .story {
   .body {
     text-align: left;
