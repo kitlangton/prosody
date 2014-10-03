@@ -45,7 +45,6 @@ input:disabled {
 }
 
 
-
 .post {
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -73,6 +72,11 @@ input:disabled {
   opacity: 0;
   .title {
     opacity: 1;
+    .post-title {
+      display: inline-block;
+      width: 55%;
+      height: 2em;
+    }
   }
   .body {
     transition: all .5s;

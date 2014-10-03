@@ -1,7 +1,7 @@
   <%= form_for @post do |f| %>
 <div class="new-container small-12 medium-10 large-8 small-centered columns">
   <div class="new-post-body">
-  <%= f.text_area :title, label: false, class: "new-post-title", placeholder: "Title", maxlength: 50 %>
+  <%= f.text_area :title, label: false, class: "new-post-title", placeholder: "Title", maxlength: 30 %>
   <%= f.text_area :body, label: false, class: "new-post-text", placeholder: "It was the lorem of times, it was the ipsum of times..." %>
   <%= f.submit  %>
   </div>

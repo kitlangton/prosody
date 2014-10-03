@@ -4,6 +4,7 @@
         <%= link_to post do %>
     <div class="post-content">
       <div class="small-12 title">
+        <em class="user-email"><%= post.user && post.user.email.split("@")[0] %></em>
         <strong class="post-title"><%= post.title %></strong>
         <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
       </div>
