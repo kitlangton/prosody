@@ -1,11 +1,10 @@
 <div class="medium-6 large-6 columns padded-column">
 
   <div class="post story">
+        <%= link_to post do %>
     <div class="post-content">
       <div class="small-12 title">
-        <%= link_to post do %>
         <strong class="post-title"><%= post.title %></strong>
-        <% end %>
         <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
       </div>
       <div class="body">
@@ -14,6 +13,7 @@
         </div>
       </div>
     </div>
+        <% end %>
   </div>
 
 </div>
