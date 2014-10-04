@@ -28,9 +28,9 @@ window.posts = ->
       opacity: 1
 
 $ ->
+  $(".new-post-text").autosize()
   $(".new-post-body").transition
     opacity: 1,
     rotateX: 0
   if $(".new-container").length > 0
     window.posts()
-    $(".new-post-text").autosize()
