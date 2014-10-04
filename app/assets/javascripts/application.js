@@ -19,3 +19,5 @@
 //= require jquery.transit.min.js
 //= require jquery.dotdotdot.min
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

@@ -1,0 +1,11 @@
+.desk {
+  .published {
+    .post-title:after{
+      content: " - Published";
+      positon: relative;
+      left: 30px;
+      font-size: .8em;
+      color: grey;
+    }
+  }
+}

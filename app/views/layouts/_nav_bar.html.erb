@@ -11,10 +11,13 @@
           <% if user_signed_in? %>
     <ul class="right">
       <li class="has-dropdown">
-        <a href="#">
+        <a>
             Logged in as <strong><%= current_user.email %></strong>.
         </a>
         <ul class="dropdown">
+          <li>
+              <%= link_to 'My Desk', desk_path %> 
+          </li>
           <li>
               <%= link_to 'Edit profile', edit_user_registration_path %> 
           </li>
