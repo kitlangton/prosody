@@ -1,18 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600,800);
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
-
-
-.new-container {
-  -webkit-perspective: 2050px; /* Chrome, Safari, Opera */
-  perspective: 2050px;
-}
-
-.post-content {
-  color: black;
-}
-
-
-.new-post-body {
+.show-post-body {
   -webkit-transform: rotateX(-20deg); /* Chrome, Safari, Opera */
   transform: rotateX(-20deg);
   -webkit-font-smoothing: antialiased;
