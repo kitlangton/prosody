@@ -31,5 +31,6 @@ $ ->
   $(".new-post-body").transition
     opacity: 1,
     rotateX: 0
-  if $(".new-container").length
+  if $(".new-container").length > 0
     window.posts()
+    $(".new-post-text").autosize()
