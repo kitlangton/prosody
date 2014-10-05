@@ -12,11 +12,20 @@
   </head>
 
   <body>
-    <%= render :partial => 'layouts/nav_bar' %>
+    <%# <%= render :partial => 'layouts/nav_bar' %>
 
-    <!-- <h1 class="main&#45;header"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1> -->
+
+    <div data-magellan-expedition="fixed" class="centered top-stick">
+    <a href="#"><h1 class="main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1></a>
+  <dl class="sub-nav noselect">
+    <dd ><%= link_to "Home", root_path, class: ""  %></dd>
+    <dd ><%= link_to "Desk", desk_path %></dd>
+  </dl>
 
     <%= render :partial => 'layouts/tool_bar' %>
+    
+</div>
+    
 
 
     <%= yield %>

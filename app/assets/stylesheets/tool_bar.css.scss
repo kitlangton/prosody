@@ -6,7 +6,15 @@
 @import url(http://fonts.googleapis.com/css?family=Anton|Fredoka+One|Oswald|Fjalla+One|Righteous);
 
 .main-header {
+  position: absolute;
   font-family: 'Fjalla One', sans-serif;
+  float: left;
+  left: 18px;
+  color: lightgrey;
+  transition: all .4s;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
@@ -32,3 +40,29 @@
   }
 }
 
+.top-stick {
+  background: white;
+  margin-bottom: 15px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.sub-nav {
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  right: 12px;
+}
+
+.sub-nav dd{
+  display: table-cell;
+  text-align: center;
+}
