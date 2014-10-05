@@ -3,6 +3,13 @@
 
   }
 
+@import url(http://fonts.googleapis.com/css?family=Anton|Fredoka+One|Oswald|Fjalla+One|Righteous);
+
+.main-header {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
 .tool-bar-button {
   text-align: center;
   margin: 0 10px;
@@ -20,6 +27,8 @@
   &:hover {
     cursor: pointer;
     background-color: rgb(232,232,232) ;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 

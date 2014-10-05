@@ -16,11 +16,14 @@ gem 'devise'
 gem 'spring',        group: :development
 gem 'unicorn'
 gem 'autosize-rails'
+gem 'kaminari'
 
 group :development, :test do
+  gem 'fabrication'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'sqlite3'
+  gem 'faker'
 end
 
 group :production do

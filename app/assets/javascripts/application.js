@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require jquery.transit.min.js
 //= require jquery.dotdotdot.min
+//= require jquery.infinitescroll
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
