@@ -6,12 +6,6 @@ $ ->
   $(".post").each (index) ->
     $(this).delay(40*index).transition
       opacity: .8,
-  $(".main-header").transition
-    color: "lightgrey"
-  $(".main-header").transition
-    color: "grey"
-  $(".main-header").transition
-    color: "lightgrey"
 
 $ ->
   $(".main-header").click ->

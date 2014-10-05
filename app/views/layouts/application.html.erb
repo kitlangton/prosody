@@ -16,7 +16,7 @@
 
 
     <div data-magellan-expedition="fixed" class="centered top-stick">
-    <a href="#"><h1 class="main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1></a>
+    <h1 class="main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1>
   <dl class="sub-nav noselect">
     <dd ><%= link_to "Home", root_path, class: ""  %></dd>
     <dd ><%= link_to "Desk", desk_path %></dd>
