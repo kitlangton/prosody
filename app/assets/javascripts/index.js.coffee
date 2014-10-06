@@ -17,3 +17,11 @@ $ ->
       color: "grey"
     $(".main-header").transition
       color: "lightgrey"
+    $(".main-header").hover (->
+      $(@).transition
+        color: "darkgrey"
+        duration: 100
+    ), ->
+      $(@).transition
+        color: "lightgrey"
+        duration: 100
