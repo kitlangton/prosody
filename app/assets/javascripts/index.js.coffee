@@ -3,6 +3,8 @@ $ ->
     watch: "window"
   $(".post .post-title").dotdotdot
     watch: "window"
-  $(".post").each (index) ->
-    $(this).delay(40*index).transition
+  $(".post").transition
       opacity: .8,
+  # $(".post").each (index) ->
+  #   $(this).delay(40*index).transition
+  #     opacity: .8,
