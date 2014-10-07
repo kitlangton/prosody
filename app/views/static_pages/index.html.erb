@@ -1,10 +1,12 @@
-
-<div class="row haikus">
-  <% @posts.each do |post| %>
-    <%= render 'post', post: post  %>
-  <% end %>
-  <% @haikus.each do |haiku| %>
-    <%= render 'haiku', haiku: haiku %>
-<% end %>
+<div id="posts">
+  
+<div class="page row haikus">
+  <%= render @posts  %>
+<%#   <% @haikus.each do |haiku| %>
+<%#     <%= render 'haiku', haiku: haiku %>
+<%# <% end %>
+</div>
 
 </div>
+
+<%= paginate @posts  %>

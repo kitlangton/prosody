@@ -1,11 +1,14 @@
-<div class="new-container small-12 medium-10 large-8 small-centered columns">
-  <div class="new-post-body">
-    <div class="show-post-title">
-      <%= @post.title  %>
-    </div>
-    <div class="new-post-text">
-      <%= @post.body  %>
-    </div>
+<% if @post.user == current_user %>
+  <% if not @post.published?  %>
+  <%= link_to "Publish", publish_post_path(@post)  %>
+  <% else %>
+  <%= link_to "Unpublish", unpublish_post_path(@post)  %>
+  <% end %>
+<% end %>
 
+<div class="show-container small-12 medium-10 large-8 small-centered columns">
+  <div class="new-post-body">
+      <%= text_area_tag "Post Title", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
+      <%= text_area_tag "Post Body", @post.body, label: false, class: "new-post-text", readonly: "readonly" %>
   </div>
 </div>

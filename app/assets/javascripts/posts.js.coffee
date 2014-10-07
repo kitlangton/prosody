@@ -28,8 +28,25 @@ window.posts = ->
       opacity: 1
 
 $ ->
+  $(".new-post-text").autosize()
   $(".new-post-body").transition
     opacity: 1,
     rotateX: 0
-  if $(".new-container").length
+  if $(".new-container").length > 0
     window.posts()
+
+$(document).ready ->
+  $("#posts .page").infinitescroll
+    navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
+    nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
+    itemSelector: "#posts .post-container" # selector for all items you'll retrieve
+  , (arrayOfNewElems) ->
+    $(".post .body").dotdotdot
+      watch: "window"
+    $(".post .post-title").dotdotdot
+      watch: "window"
+    $(@).find(".post").each (index) ->
+      $(this).delay(40*index).transition
+        opacity: .8,
+
+

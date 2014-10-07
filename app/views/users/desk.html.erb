@@ -1,0 +1,10 @@
+<% content_for :header do  %>
+  My Desk
+<% end %>
+
+<div class="row haikus desk">
+  <% @posts.each do |post| %>
+    <%= render 'static_pages/post', post: post  %>
+  <% end %>
+
+</div>

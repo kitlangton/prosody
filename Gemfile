@@ -15,6 +15,10 @@ gem 'foundation_rails_helper'
 gem 'devise'
 gem 'spring',        group: :development
 gem 'unicorn'
+gem 'autosize-rails'
+gem 'kaminari'
+gem 'fabrication'
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'

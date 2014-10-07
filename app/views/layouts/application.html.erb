@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Proser" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,9 +12,21 @@
   </head>
 
   <body>
-    <%= render :partial => 'layouts/nav_bar' %>
+    <%# <%= render :partial => 'layouts/nav_bar' %>
+
+
+    <div data-magellan-expedition="fixed" class="centered top-stick">
+    <h1 class="main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1>
+  <dl class="sub-nav noselect">
+    <dd ><%= link_to "Home", root_path, class: ""  %></dd>
+    <dd ><%= link_to "Desk", desk_path %></dd>
+  </dl>
 
     <%= render :partial => 'layouts/tool_bar' %>
+    
+</div>
+    
+
 
     <%= yield %>
     <%= javascript_include_tag "application" %>

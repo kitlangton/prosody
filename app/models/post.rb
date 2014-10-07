@@ -4,6 +4,12 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
   validates :title, presence: true
 
+  scope :published, -> { where.not(published_on: nil ) }
+
+  def published?
+    published_on != nil
+  end
+
   private
 
   def post_titleize

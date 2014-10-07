@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get 'users/desk'
+
   devise_for :users
   resources :posts
   resources :haikus
   root 'static_pages#index'
+
+  get '/desk', to: 'users#desk', as: 'desk'
+  get '/desk/publish', to: 'users#publish', as: 'publish_post'
+  get '/desk/unpublish', to: 'users#unpublish', as: 'unpublish_post'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
