@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :haikus
+  resources :users
   root 'static_pages#index'
 
   get '/desk', to: 'users#desk', as: 'desk'

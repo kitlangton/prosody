@@ -1,10 +1,12 @@
 <div class="post-container medium-6 large-6 columns padded-column">
 
   <div class="post story <%= "published" if post.published? %>">
-        <%= link_to post do %>
     <div class="post-content">
       <div class="small-12 title">
+        <%= link_to post.user do %>
         <em class="user-email"><%= post.user && post.user.email.split("@")[0] %></em>
+        <% end %>
+        <%= link_to post, class: "dont-be-blue" do %>
         <strong class="post-title"><%= post.title %></strong>
           <% if post.published? %>
             <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>

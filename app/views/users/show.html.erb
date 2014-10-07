@@ -1,0 +1,8 @@
+<% content_for :header do  %>
+  <%= @user.email.split("@")[0]  %>
+<% end %>
+
+
+<div class="page row haikus">
+  <%= render @posts  %>
+</div>

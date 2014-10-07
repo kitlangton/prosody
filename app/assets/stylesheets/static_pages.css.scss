@@ -13,6 +13,13 @@
   margin-top: 10px;
 }
 
+.dont-be-blue {
+  color: black;
+  &:hover {
+  color: black;
+  }
+}
+
 .lines {
   position: relative;
   line-height: 10px;
