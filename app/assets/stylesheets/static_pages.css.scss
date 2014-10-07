@@ -1,3 +1,14 @@
+.opts-container {
+  background-color: rgb(227,227,227);
+}
+
+.options-sheet {
+  font-size: 1.3em;
+  font-family: "Fjalla One";
+  padding: 20px 0 20px 0;
+  list-style: none;
+}
+
 .lines-1{
   margin-top: 10px;
 }
@@ -19,6 +30,7 @@
   overflow: hidden;
   width: 100%;
 }
+
 #site-canvas {
   width: 100%;
   height: 100%;
@@ -41,18 +53,20 @@
   transform: translate3d(300px, 0, 0);
   -webkit-transform: translate3d(300px, 0, 0);
 }
+
 #site-menu {
   width: 300px;
   height: 100%;
-  position: absolute;
-  top: 0;
+  display: block;
+  position: fixed;
+  top: 0px;
   left: -300px;
-  background: lightgrey;
+  // background: lightgrey;
   padding: 15px;
 }
 
 
-.ease { -webkit-transition: 300ms ease all; transition: 300ms ease all; }
+.ease { -webkit-transition: 400ms ease all; transition: 400ms ease all; }
 .linear { -webkit-transition: 300ms linear all; transition: 300ms linear all; }
 .ease-in { -webkit-transition: 300ms ease-in all; transition: 300ms ease-in all; }
 .ease-out { -webkit-transition: 300ms ease-out all; transition: 300ms ease-out all; }

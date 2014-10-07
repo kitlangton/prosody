@@ -13,29 +13,36 @@
 
   <body>
     <%# <%= render :partial => 'layouts/nav_bar' %>
-    <div id="site-wrapper">
+    <div id="site-wrapper" class="stay">
 
-      <div id="site-canvas">
+      <div id="site-canvas" class="stay">
 
         <div id="site-menu">
-          <div>
-                <%= link_to 'Edit profile', edit_user_registration_path %> 
-          </div>
-          <div>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <div class="opts-container">
+            
+            <ul class="options-sheet">
+              <li>
+                <%= link_to 'EDIT PROFILE', edit_user_registration_path%> 
+              </li>
+              <li>
+                <%= link_to "LOGOUT", destroy_user_session_path, method: :delete%>
+              </li>
+            </ul>
+
           </div>
         </div>
 
-          <div data-magellan-expedition="fixed" class="centered top-stick">
-            <h1 class="left-off-canvas-toggle main-header noselect" data-transition="ease" ><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %><span class="lines-1 lines">—</span><span class="lines">—</span><span class="lines">—</span></h1>
-            <dl class="sub-nav noselect">
-              <dd ><%= link_to "Home", root_path, class: ""  %></dd>
-              <dd ><%= link_to "Desk", desk_path %></dd>
-            </dl>
-            <%= render :partial => 'layouts/tool_bar' %>
-          </div>
-          <%= yield %>
-          <%= javascript_include_tag "application" %>
+        <div  class="centered top-stick sticky">
+          <h1 class="left-off-canvas-toggle main-header noselect" data-transition="ease" ><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %><span class="lines-1 lines">—</span><span class="lines">—</span><span class="lines">—</span></h1>
+          <dl class="sub-nav noselect">
+            <dd ><%= link_to "Home", root_path, class: ""  %></dd>
+            <dd ><%= link_to "Desk", desk_path %></dd>
+          </dl>
+          <%= render :partial => 'layouts/tool_bar' %>
+        </div>
+
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
 
 
       </div>

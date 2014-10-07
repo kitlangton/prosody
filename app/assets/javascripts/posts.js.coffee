@@ -1,4 +1,5 @@
 window.posts = ->
+  $(".new-post-title").focus()
   presses = 0
   $(".new-post-text").keyup ->
     presses += 1
@@ -9,7 +10,7 @@ window.posts = ->
     $(".top-bar").stop(true,false).transition
       opacity: 0,
       duration: 600
-    $("div").not(".new-container, .new-post-body").stop(true,false).transition
+    $("div").not(".new-container, .new-post-body, .stay").stop(true,false).transition
       opacity: 0,
       duration: 600
   $("div").mouseenter ->
@@ -45,8 +46,7 @@ $(document).ready ->
       watch: "window"
     $(".post .post-title").dotdotdot
       watch: "window"
-    $(@).find(".post").each (index) ->
-      $(this).delay(40*index).transition
+    $(@).find(".post").transition
         opacity: .8,
 
 
