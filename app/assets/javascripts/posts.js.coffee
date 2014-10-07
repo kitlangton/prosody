@@ -48,5 +48,3 @@ $(document).ready ->
       watch: "window"
     $(@).find(".post").transition
         opacity: .8,
-
-
