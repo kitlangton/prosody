@@ -13,22 +13,45 @@
 
   <body>
     <%# <%= render :partial => 'layouts/nav_bar' %>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap ">
+
+        <!-- <a class="left&#45;off&#45;canvas&#45;toggle" href="#" >Menu</a> -->
+
+        <!-- Off Canvas Menu -->
+        <aside class="left-off-canvas-menu fixed-oc">
+          <ul class="off-canvas-list" >
+            
+          <li>
+              <%= link_to 'Edit profile', edit_user_registration_path %> 
+          </li>
+          <li>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          </li>
+          </ul>
+        </aside>
+
+        <!-- main content goes here -->
+        <div data-magellan-expedition="fixed" class="centered top-stick">
+          <h1 class="left-off-canvas-toggle main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %><span class="lines-1 lines">—</span><span class="lines">—</span><span class="lines">—</span></h1>
+          <dl class="sub-nav noselect">
+            <dd ><%= link_to "Home", root_path, class: ""  %></dd>
+            <dd ><%= link_to "Desk", desk_path %></dd>
+          </dl>
+
+          <%= render :partial => 'layouts/tool_bar' %>
+
+        </div>
 
 
-    <div data-magellan-expedition="fixed" class="centered top-stick">
-    <h1 class="main-header noselect"><%= content_for?(:header) ? yield(:header).upcase : "PROSER" %></h1>
-  <dl class="sub-nav noselect">
-    <dd ><%= link_to "Home", root_path, class: ""  %></dd>
-    <dd ><%= link_to "Desk", desk_path %></dd>
-  </dl>
 
-    <%= render :partial => 'layouts/tool_bar' %>
-    
-</div>
-    
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
 
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas"></a>
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+      </div>
+    </div>
   </body>
 </html>

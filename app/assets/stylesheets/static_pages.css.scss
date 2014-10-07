@@ -1,0 +1,17 @@
+.lines-1{
+  margin-top: 10px;
+}
+
+.lines {
+  position: relative;
+  line-height: 10px;
+  bottom: 10px;
+  left: -8px;
+  opacity: 0;
+  display: block;
+}
+
+.fixed-oc {
+  position: fixed;
+  height: 100%;
+}

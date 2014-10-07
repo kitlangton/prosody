@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def require_signin!
     if current_user.nil?
       redirect_to new_user_session_path
-      flash[:error] = "Must sign in to create a post"
+      flash[:error] = "Must be logged in to use Proser"
     end
   end
 
