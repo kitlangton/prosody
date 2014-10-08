@@ -3,7 +3,7 @@ $ ->
     watch: "window"
   $(".post .post-title").dotdotdot
     watch: "window"
-  $(".post").transition
+  $(".haikus, .post").transition
       opacity: .8,
 
 $ ->

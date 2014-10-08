@@ -36,6 +36,7 @@ $ ->
   if $(".new-container").length > 0
     window.posts()
 
+
 $(document).ready ->
   $("#posts .page").infinitescroll
     navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)

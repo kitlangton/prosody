@@ -1,6 +1,6 @@
 <div class="medium-6 large-6 columns padded-column">
 
-  <div class="post story <%= "published" if post.published? %>">
+  <div class="post story <%= "draft" if post.draft? %>">
         <%= link_to post do %>
     <div class="post-content">
       <div class="small-12 title">

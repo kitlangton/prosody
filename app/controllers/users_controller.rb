@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
 
   def desk
-    @posts = Post.where(user_id:current_user.id).order("created_at desc").page params[:page]
+    @posts = Post.where(user_id:current_user.id).published.order("created_at desc").page params[:page]
+    @drafts = Post.where(user_id:current_user.id).unpublished.order("created_at desc").page params[:page]
   end
 
   def publish

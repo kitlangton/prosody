@@ -1,14 +1,28 @@
-<% if @post.user == current_user %>
-  <% if not @post.published?  %>
-  <%= link_to "Publish", publish_post_path(@post)  %>
-  <% else %>
-  <%= link_to "Unpublish", unpublish_post_path(@post)  %>
-  <% end %>
-<% end %>
+  <%= form_for @post do |f| %>
 
 <div class="show-container small-12 medium-10 large-8 small-centered columns">
   <div class="new-post-body">
-      <%= text_area_tag "Post Title", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
-      <%= text_area_tag "Post Body", @post.body, label: false, class: "new-post-text", readonly: "readonly" %>
+  <div class="post-controls right">
+
+      <% if @post.user == current_user %>
+    <span class="hidden-controls">
+      <%= f.submit "SAVE", class: "button save-button dispnone", id:"save-button", disabled: true %>
+        <%= content_tag :span, "EDIT", class: "button save-button edit-button", id: "edit-button"  %>
+        <% if not @post.published?  %>
+          <%= link_to "PUBLISH", publish_post_path(@post), class: "button save-button" %>
+        <% else %>
+          <%= link_to "UNPUBLISH", unpublish_post_path(@post), class: "button save-button"  %>
+        <% end  %>
+    </span>
+      <% end %>
+      <% if @post.user == current_user %>
+        <span class="tool-box">
+    <strong id="tool-gear">III</strong>
+        </span>
+  <% end  %>
+  </div>
+      <%= text_area_tag "post[title]", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
+      <%= text_area_tag "post[body]", @post.body, label: false, class: "new-post-text", readonly: "readonly" %>
   </div>
 </div>
+<% end %>

@@ -3,8 +3,16 @@
 <% end %>
 
 <div class="row haikus desk">
+  <h3>DRAFTS</h3>
+  <% @drafts.each do |post| %>
+    <%= render 'static_pages/post', post: post  %>
+  <% end %>
+  <hr />
+  <h3>PUBLISHED</h3>
   <% @posts.each do |post| %>
     <%= render 'static_pages/post', post: post  %>
   <% end %>
 
 </div>
+
+<%= paginate @posts  %>

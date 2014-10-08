@@ -3,7 +3,10 @@
 <div class="new-container small-12 medium-10 large-8 small-centered columns">
   <div class="new-post-body">
   <div class="post-controls right">
-    <%= f.button "SAVE", class: "save-button" %>
+    <span class="hidden-controls">
+      <%= f.button "SAVE", class: "save-button", disabled: true %>
+    </span>
+    <strong id="tool-gear">III</strong>
   </div>
   <%= f.text_area :title, label: false, class: "new-post-title", placeholder: "Title", maxlength: 30 %>
   <%= f.text_area :body, label: false, class: "new-post-text", placeholder: "It was the lorem of times, it was the ipsum of times..." %>

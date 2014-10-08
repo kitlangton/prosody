@@ -4,6 +4,12 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    render 'show'
+  end
+
   def create
     @post = Post.new(post_params)
     @post.update(user: current_user)

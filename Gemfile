@@ -19,6 +19,7 @@ gem 'autosize-rails'
 gem 'kaminari'
 gem 'fabrication'
 gem 'faker'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'rspec-rails'
