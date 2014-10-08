@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
     dictionary = Dictionary.from_file('./lib/SuperDict.txt')
     first = dictionary.starting_with(self.first_name.to_s[0..1])[-1]
     last = dictionary.starting_with(self.last_name.to_s[0..1])[-1]
-    ndp = [first.capitalize,last.capitalize].join(" ")
+    ndp = [first,last].join(" ")
     self.nom_de_plume = ndp
   end
 end
