@@ -5,14 +5,11 @@
 <div class="row haikus desk">
   <h3>DRAFTS</h3>
   <% @drafts.each do |post| %>
-    <%= render 'static_pages/post', post: post  %>
+    <%= render 'posts/post', post: post  %>
   <% end %>
   <hr />
   <h3>PUBLISHED</h3>
-  <% @posts.each do |post| %>
-    <%= render 'static_pages/post', post: post  %>
-  <% end %>
-
+  <%= render @posts  %>
 </div>
 
 <%= paginate @posts  %>

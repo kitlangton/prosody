@@ -4,7 +4,7 @@
     <div class="post-content">
       <div class="small-12 title">
         <%= link_to post.user do %>
-        <em class="user-email"><%= post.user && post.user.name %></em>
+        <em class="user-email"><%= post.user && post.user.nom_de_plume %></em>
         <% end %>
         <%= link_to post, class: "dont-be-blue" do %>
         <strong class="post-title"><%= post.title %></strong>

@@ -20,6 +20,7 @@ gem 'kaminari'
 gem 'fabrication'
 gem 'faker'
 gem 'font-awesome-sass'
+gem 'ruby-dictionary'
 
 group :development, :test do
   gem 'rspec-rails'

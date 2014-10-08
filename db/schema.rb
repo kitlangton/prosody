@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004194903) do
+ActiveRecord::Schema.define(version: 20141008205025) do
 
   create_table "haikus", force: true do |t|
     t.string   "text"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 20141004194903) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "nom_de_plume"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

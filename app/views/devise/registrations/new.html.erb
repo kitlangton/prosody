@@ -4,7 +4,13 @@
   <%= devise_error_messages! %>
 
   <div class="small-12 medium-8 large-5 small-centered text-center columns">
-  <%= f.email_field :email, autofocus: true %></div>
+  <%= f.text_field :first_name, autofocus: true %></div>
+
+  <div class="small-12 medium-8 large-5 small-centered text-center columns">
+  <%= f.text_field :last_name, autofocus: true %></div>
+
+  <div class="small-12 medium-8 large-5 small-centered text-center columns">
+  <%= f.email_field :email%></div>
 
   <div class="small-12 medium-8 large-5 small-centered text-center columns"><% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
