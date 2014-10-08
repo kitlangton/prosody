@@ -1,5 +1,5 @@
 $ ->
   $(".post").hover (-> 
-    $(this).find(".user-email").stop(true,false).fadeIn("linear")
+    $(this).find(".date-created").stop(true,false).fadeIn("linear")
   ), ->
-    $(this).find(".user-email").stop(true,false).fadeOut("linear")
+    $(this).find(".date-created").stop(true,false).fadeOut("linear")

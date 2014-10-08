@@ -58,13 +58,14 @@ input:disabled {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   .user-email {
-    display: none;
-    position: absolute;
-    left: 10px;
-  }
-  .date-created {
     position: absolute;
     right: 10px;
+  }
+  .date-created {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
   }
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
