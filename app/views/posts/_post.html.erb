@@ -4,23 +4,23 @@
     <div class="post-content">
       <div class="small-12 title">
         <%= link_to post.user do %>
-        <em class="user-email"><%= post.user && post.user.nom_de_plume %></em>
-        <% end %>
+          <em class="user-email"><%= post.user && post.user.nom_de_plume %></em>
+      <% end %>
         <%= link_to post, class: "dont-be-blue" do %>
-        <strong class="post-title"><%= post.title %></strong>
-          <% if post.published? %>
-            <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>
-          <% else  %>
-            <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
-          <% end  %>
+          <strong class="post-title"><%= post.title %></strong>
+        <% if post.published? %>
+          <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>
+      <% else  %>
+          <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
+      <% end  %>
       </div>
       <div class="body">
-          <div>
-            <%= post.body  %>
+        <div>
+          <%= post.body  %>
         </div>
       </div>
     </div>
-        <% end %>
+  <% end %>
   </div>
 
 </div>
