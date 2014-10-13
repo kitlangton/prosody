@@ -1,6 +1,9 @@
 class Post < ActiveRecord::Base
+  has_many :comments
   belongs_to :user
+
   before_save :post_titleize
+
   validates :body, presence: true
   validates :title, presence: true
 

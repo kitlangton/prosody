@@ -1,6 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600,800);
 @import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 
+.post-comments {
+  top: 8px;
+  left: 10px;
+  font-size: 1.3em;
+  position: absolute;
+  font-family: "Fjalla One";
+  color: grey;
+}
 
 .new-container {
   -webkit-perspective: 2050px; /* Chrome, Safari, Opera */
@@ -53,7 +61,7 @@
     right: 20px;
     spacing: 0px;
   }
-  
+
   .save-button{
     font-family: "Fjalla One";
     -webkit-font-smoothing: antialiased;

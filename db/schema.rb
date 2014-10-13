@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008205025) do
+ActiveRecord::Schema.define(version: 20141013185105) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.text     "body"
+    t.text     "quote"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "haikus", force: true do |t|
     t.string   "text"

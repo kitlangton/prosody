@@ -1,0 +1,12 @@
+<div class="show-comment">
+  <div class="comment-user">
+    <%= link_to  comment.author.upcase, comment.post.user  %>
+    <span class="comment-time"> — <%= time_ago_in_words(comment.created_at) + " ago"  %></span>
+  </div>
+  <blockquote class="comment-quote">
+    <%= comment.quote  %>
+  </blockquote >
+  <p class="comment-body">
+    "<%= comment.body  %>"
+  </p>
+</div>

@@ -1,33 +1,63 @@
 <%# <%= content_for :header do %>
-<%#   Post by <%= @post.user.nom_de_plume.split[0] %>
+  <%#   Post by <%= @post.user.nom_de_plume.split[0] %>
 <%# <% end %>
 
   <%= form_for @post do |f| %>
 
-<div class="show-container small-12 medium-10 large-8 small-centered columns">
+
+  <div class="show-container small-12 medium-10 large-8 small-centered columns">
   <div class="new-post-body">
-  <div class="post-controls right">
+    <% if @post.comments.count > 0  %>
+      <div class="post-comments left">
+      <a href="#" id="modal2-click" data-reveal-id="comments-modal">
+        <%= @post.comments.count %>
+      </a>
+    </div>
+  <% end %>
+    <div class="post-controls right">
 
       <% if @post.user == current_user %>
-    <span class="hidden-controls">
-      <%= f.submit "SAVE", class: "button save-button dispnone", id:"save-button", disabled: true %>
+        <span class="hidden-controls">
+        <%= f.submit "SAVE", class: "button save-button dispnone", id:"save-button", disabled: true %>
         <%= content_tag :span, "EDIT", class: "button save-button edit-button", id: "edit-button"  %>
         <% if not @post.published?  %>
           <%= link_to "PUBLISH", publish_post_path(@post), class: "button save-button" %>
-        <% else %>
+      <% else %>
           <%= link_to "UNPUBLISH", unpublish_post_path(@post), class: "button save-button"  %>
-        <% end  %>
-    </span>
-      <% end %>
+      <% end  %>
+      </span>
+    <% end %>
       <% if @post.user == current_user %>
         <span class="tool-box">
-    <strong id="tool-gear">III</strong>
-        </span>
-  <% end  %>
-  </div>
-  <%= link_to @post.user.nom_de_plume_display, @post.user, class: "post-author" %>
-      <%= text_area_tag "post[title]", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
-      <%= text_area_tag "post[body]", @post.body, label: false, class: "new-post-text", readonly: "readonly" %>
-  </div>
+        <strong id="tool-gear">III</strong>
+      </span>
+    <% end  %>
+    </div>
+    <%= link_to @post.user.nom_de_plume_display, @post.user, class: "post-author" %>
+    <%= text_area_tag "post[title]", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
+    <%= text_area_tag "post[body]", @post.body, label: false, class: "new-post-text show-post-text", readonly: "readonly" %> </div>
 </div>
 <% end %>
+
+
+<div id="comment-modal" class="reveal-modal" data-reveal>
+  <h3>New Comment</h3>
+  <%= form_for @comment do |f|  %>
+    <blockquote class="comment-quote" id="quote-text">
+  </blockquote>
+  <%= f.hidden_field :quote %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.text_area :body %>
+  <%= f.submit "Comment" %>
+<% end %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<% if @post.comments.count > 0  %>
+  <div id="comments-modal" class="reveal-modal" data-reveal>
+  <h3>Comments</h3>
+  <%= render @comments  %>
+</div>
+<% end %>
+
+<a href="#" id="modal-click" data-reveal-id="comment-modal" class="dispnone">Click Me For A Modal</a>

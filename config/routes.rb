@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'users/desk'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :comments
   resources :posts
   resources :haikus
   resources :users

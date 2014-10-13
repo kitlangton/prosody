@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :comments
   has_many :haikus
   has_many :posts
   before_create :concoct_nom_de_plume
