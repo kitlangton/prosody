@@ -1,0 +1,95 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APP_PATH	bin/rails	/^APP_PATH = File.expand_path('..\/..\/config\/application',  __FILE__)$/;"	c
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddNamesToUsers	db/migrate/20141008205025_add_names_to_users.rb	/^class AddNamesToUsers < ActiveRecord::Migration$/;"	c
+AddPublishedOnToPosts	db/migrate/20141004194903_add_published_on_to_posts.rb	/^class AddPublishedOnToPosts < ActiveRecord::Migration$/;"	c
+AddUserReferenceToHaikus	db/migrate/20141001151824_add_user_reference_to_haikus.rb	/^class AddUserReferenceToHaikus < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Prosody
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+Comments	app/models/comments.rb	/^class Comments < ActiveRecord::Base$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsController	app/controllers/posts/comments_controller.rb	/^class CommentsController < PostsControlleu$/;"	c
+CreateComments	db/migrate/20141013175901_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
+CreateHaikus	db/migrate/20140929192237_create_haikus.rb	/^class CreateHaikus < ActiveRecord::Migration$/;"	c
+CreatePosts	db/migrate/20141003023435_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20140930195656_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Haiku	app/models/haiku.rb	/^class Haiku < ActiveRecord::Base$/;"	c
+HaikusController	app/controllers/haikus_controller.rb	/^class HaikusController < ApplicationController$/;"	c
+HaikusHelper	app/helpers/haikus_helper.rb	/^module HaikusHelper$/;"	m
+Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
+PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
+PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
+Prosody	config/application.rb	/^module Prosody$/;"	m
+RegistrationsController	app/controllers/registrations_controller.rb	/^class RegistrationsController < Devise::RegistrationsController$/;"	c
+StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
+StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+account_update_params	app/controllers/registrations_controller.rb	/^  def account_update_params$/;"	f	class:RegistrationsController
+author	app/models/comment.rb	/^  def author$/;"	f	class:Comment
+change	db/migrate/20140929192237_create_haikus.rb	/^  def change$/;"	f	class:CreateHaikus
+change	db/migrate/20140930195656_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20141001151824_add_user_reference_to_haikus.rb	/^  def change$/;"	f	class:AddUserReferenceToHaikus
+change	db/migrate/20141003023435_create_posts.rb	/^  def change$/;"	f	class:CreatePosts
+change	db/migrate/20141004194903_add_published_on_to_posts.rb	/^  def change$/;"	f	class:AddPublishedOnToPosts
+change	db/migrate/20141008205025_add_names_to_users.rb	/^  def change$/;"	f	class:AddNamesToUsers
+change	db/migrate/20141013175901_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+comments	app/models/post.rb	/^  has_many :comments$/;"	f
+comments	app/models/user.rb	/^  has_many :comments$/;"	f
+concoct_nom_de_plume	app/models/user.rb	/^  def concoct_nom_de_plume$/;"	f	class:User
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
+create	app/controllers/haikus_controller.rb	/^  def create$/;"	f	class:HaikusController
+create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
+desk	app/controllers/users_controller.rb	/^  def desk$/;"	f	class:UsersController
+draft?	app/models/post.rb	/^  def draft?$/;"	f	class:Post
+generate_nom_de_plume	app/models/user.rb	/^  def generate_nom_de_plume$/;"	f	class:User
+generate_word_from	app/models/user.rb	/^  def generate_word_from (name)$/;"	f	class:User
+getSelected	app/assets/javascripts/posts.js.coffee	/^getSelected = ->$/;"	f
+haiku_params	app/controllers/haikus_controller.rb	/^  def haiku_params$/;"	f	class:HaikusController
+haikus	app/models/user.rb	/^  has_many :haikus$/;"	f
+index	app/controllers/static_pages_controller.rb	/^  def index$/;"	f	class:StaticPagesController
+insertButton	app/assets/javascripts/posts.js.coffee	/^insertButton = ->$/;"	f
+loading	app/assets/javascripts/users.js.coffee	/^loading = (button) ->$/;"	f
+new	app/controllers/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
+new	app/controllers/haikus_controller.rb	/^  def new$/;"	f	class:HaikusController
+new	app/controllers/posts/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
+new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
+new_de_plume	app/controllers/users_controller.rb	/^  def new_de_plume$/;"	f	class:UsersController
+nom_de_plume_display	app/models/user.rb	/^  def nom_de_plume_display$/;"	f	class:User
+original	app/assets/javascripts/users.js.coffee	/^    original = $(@).text()$/;"	v
+post	app/models/comment.rb	/^  belongs_to :post$/;"	f
+post	app/models/comments.rb	/^  belongs_to :post$/;"	f
+post_params	app/controllers/comments_controller.rb	/^  def post_params$/;"	f	class:CommentsController
+post_params	app/controllers/posts_controller.rb	/^  def post_params$/;"	f	class:PostsController
+post_titleize	app/models/post.rb	/^  def post_titleize$/;"	f	class:Post
+posts	app/models/user.rb	/^  has_many :posts$/;"	f
+presses	app/assets/javascripts/posts.js.coffee	/^    presses = 0$/;"	v
+presses	app/assets/javascripts/posts.js.coffee	/^  presses = 0$/;"	v
+publish	app/controllers/users_controller.rb	/^  def publish$/;"	f	class:UsersController
+publish!	app/models/post.rb	/^  def publish!$/;"	f	class:Post
+published	app/models/post.rb	/^  scope :published, -> { where.not(published_on: nil ) }$/;"	f
+published?	app/models/post.rb	/^  def published?$/;"	f	class:Post
+require_signin!	app/controllers/application_controller.rb	/^  def require_signin!$/;"	f	class:ApplicationController
+selection	app/assets/javascripts/posts.js.coffee	/^      selection = getSelected()$/;"	v
+show	app/controllers/posts_controller.rb	/^  def show$/;"	f	class:PostsController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+sign_up_params	app/controllers/registrations_controller.rb	/^  def sign_up_params$/;"	f	class:RegistrationsController
+special	app/assets/javascripts/index.js.coffee	/^  special = [$/;"	v
+title	app/models/haiku.rb	/^  def title$/;"	f	class:Haiku
+unpublish	app/controllers/users_controller.rb	/^  def unpublish$/;"	f	class:UsersController
+unpublished	app/models/post.rb	/^  scope :unpublished, -> { where(published_on: nil ) }$/;"	f
+update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
+user	app/models/comment.rb	/^  belongs_to :user$/;"	f
+user	app/models/comments.rb	/^  belongs_to :user$/;"	f
+user	app/models/haiku.rb	/^  belongs_to :user$/;"	f
+user	app/models/post.rb	/^  belongs_to :user$/;"	f
+window.posts	app/assets/javascripts/posts.js.coffee	/^window.posts = ->$/;"	f
+window.showpost	app/assets/javascripts/posts.js.coffee	/^window.showpost = ->$/;"	f

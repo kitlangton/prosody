@@ -23,6 +23,8 @@ gem 'font-awesome-sass'
 gem 'ruby-dictionary'
 gem "spring-commands-rspec", group: :development
 gem 'newrelic_rpm'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'devise_invitable', '~> 1.3.4'
 
 group :development, :test do
   gem 'rspec-rails'
