@@ -3,7 +3,6 @@ class HaikusController < ApplicationController
 
   def new
     @haiku = Haiku.new
-
   end
 
   def create

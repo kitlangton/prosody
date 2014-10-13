@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :haikus
   has_many :posts
-  before_save :concoct_nom_de_plume
+  before_create :concoct_nom_de_plume
   require 'ruby-dictionary'
 
   # Include default devise modules. Others available are:
@@ -9,13 +9,29 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def concoct_nom_de_plume
+    ndp = generate_nom_de_plume
+    self.nom_de_plume = ndp
+  end
+
   private
 
-  def concoct_nom_de_plume
-    dictionary = Dictionary.from_file('./lib/SuperDict.txt')
-    first = dictionary.starting_with(self.first_name.to_s[0..1])[-1]
-    last = dictionary.starting_with(self.last_name.to_s[0..1])[-1]
+  def generate_nom_de_plume
+    first = generate_word_from first_name.to_s
+    last = generate_word_from last_name.to_s
     ndp = [first,last].join(" ")
-    self.nom_de_plume = ndp
+  end
+
+  def generate_word_from (name)
+    dictionary = Dictionary.from_file('./lib/SuperDict.txt')
+    length = name.length
+
+    length.times do |i|
+      values = dictionary.starting_with(name.to_s[0..length-i])
+      if values.length > 8
+        random_word = Random.rand(values.length)
+        return values[random_word]
+      end
+    end
   end
 end

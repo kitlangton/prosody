@@ -21,6 +21,8 @@ gem 'fabrication'
 gem 'faker'
 gem 'font-awesome-sass'
 gem 'ruby-dictionary'
+gem "spring-commands-rspec", group: :development
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails'
