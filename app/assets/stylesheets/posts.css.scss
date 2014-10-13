@@ -1,6 +1,23 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.post-author {
+  margin: 0 auto;
+  width: 30%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s;
+  color: grey;
+  display: block;
+  position: relative;
+  top: 12px;
+  margin-bottom: -20px;
+  text-align: center;
+  font-family: "Fjalla One";
+  &:hover {
+    color: black;
+  }
+}
+
 .post-title {
   text-decoration: none;
   color: black;

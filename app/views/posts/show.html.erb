@@ -1,3 +1,7 @@
+<%# <%= content_for :header do %>
+<%#   Post by <%= @post.user.nom_de_plume.split[0] %>
+<%# <% end %>
+
   <%= form_for @post do |f| %>
 
 <div class="show-container small-12 medium-10 large-8 small-centered columns">
@@ -21,6 +25,7 @@
         </span>
   <% end  %>
   </div>
+  <%= link_to @post.user.nom_de_plume_display, @post.user, class: "post-author" %>
       <%= text_area_tag "post[title]", @post.title, class: "new-post-title", placeholder: "Title", maxlength: 30, readonly: "readonly" %>
       <%= text_area_tag "post[body]", @post.body, label: false, class: "new-post-text", readonly: "readonly" %>
   </div>

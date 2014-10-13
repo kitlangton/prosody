@@ -43,6 +43,7 @@
   height: 0;
 
   .hidden-controls {
+    z-index: 999;
     .button {
       padding: 0 10px;
     }
@@ -117,6 +118,7 @@
     position: relative;
     top: 25px;
     padding: 0 8%;
+    padding-bottom: 500px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     font-size: 2em;

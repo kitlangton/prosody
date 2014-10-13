@@ -7,6 +7,10 @@ class Post < ActiveRecord::Base
   scope :published, -> { where.not(published_on: nil ) }
   scope :unpublished, -> { where(published_on: nil ) }
 
+  def publish!
+     update(published_on: DateTime.now)
+  end
+
   def published?
     published_on != nil
   end

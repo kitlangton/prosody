@@ -14,7 +14,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.update(user: current_user)
     if @post.save
-      redirect_to root_path
+      if params[:button] == "publish"
+        @post.publish!
+      end
+      redirect_to desk_path
     else
       render "new"
     end

@@ -58,8 +58,14 @@ input:disabled {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   .user-email {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s;
     position: absolute;
     right: 10px;
+    color: grey;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .date-created {
     display: none;
@@ -99,6 +105,9 @@ input:disabled {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
   padding: 10px 0 0px 0;
   &:hover {
+    .user-email {
+      color: black;
+    }
     .body {
     opacity: 1;
     }

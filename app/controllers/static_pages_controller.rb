@@ -5,4 +5,5 @@ class StaticPagesController < ApplicationController
     @haikus = Haiku.all.order("created_at desc")
     @posts = Post.published.order("created_at desc").page params[:page]
   end
+
 end

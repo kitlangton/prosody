@@ -9,9 +9,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def nom_de_plume_display
+    self.nom_de_plume.upcase + "'S"
+  end
+
   def concoct_nom_de_plume
     ndp = generate_nom_de_plume
-    self.nom_de_plume = ndp
+    self.nom_de_plume = ndp.titleize
   end
 
   private

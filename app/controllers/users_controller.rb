@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def publish
     @post = Post.find(params[:format])
-    @post.update(published_on: DateTime.now)
+    @post.publish!
     redirect_to desk_path
   end
 
