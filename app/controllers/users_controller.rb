@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
 
   def desk
-    @posts = Post.where(user_id:current_user.id).published.order("created_at desc").page params[:page]
-    @drafts = Post.where(user_id:current_user.id).unpublished.order("created_at desc").page params[:page]
+    @posts = Post.where(user_id:current_user.id).published.order("published_on desc").page params[:page]
+    @drafts = Post.where(user_id:current_user.id).unpublished.order("updated_at desc").page params[:page]
   end
 
   def publish
@@ -20,5 +20,11 @@ class UsersController < ApplicationController
     @post = Post.find(params[:format])
     @post.update(published_on: nil)
     redirect_to desk_path
+  end
+
+  def new_de_plume
+    if request.xhr?
+      render html: current_user.generate_nom_de_plume.titleize
+    end
   end
 end

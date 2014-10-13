@@ -19,13 +19,14 @@ class User < ActiveRecord::Base
     self.nom_de_plume = ndp.titleize
   end
 
-  private
-
   def generate_nom_de_plume
     first = generate_word_from first_name.to_s
     last = generate_word_from last_name.to_s
     ndp = [first,last].join(" ")
   end
+
+  private
+
 
   def generate_word_from (name)
     dictionary = Dictionary.from_file('./lib/SuperDict.txt')
@@ -33,7 +34,7 @@ class User < ActiveRecord::Base
 
     length.times do |i|
       values = dictionary.starting_with(name.to_s[0..length-i])
-      if values.length > 8
+      if values.length > 15
         random_word = Random.rand(values.length)
         return values[random_word]
       end

@@ -19,12 +19,12 @@ insertButton = ->
   )
 window.showpost = ->
   $(".show-post-text").mouseup ->
-    selection = getSelected()
-    $("#quote-text").text selection
-    $("#comment_quote").val selection
-    $("#modal-click").click()
-    # alert selection  if selection
-    return
+    unless $(".editing-active").length > 0
+      selection = getSelected()
+      $("#quote-text").text selection
+      $("#comment_quote").val selection
+      $("#modal-click").click()
+      return
 
 window.posts = ->
   $(".new-post-title").focus()

@@ -47,7 +47,7 @@
   </blockquote>
   <%= f.hidden_field :quote %>
   <%= f.hidden_field :post_id, value: @post.id %>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, class: "comment-body" %>
   <%= f.submit "Comment" %>
 <% end %>
   <a class="close-reveal-modal">&#215;</a>

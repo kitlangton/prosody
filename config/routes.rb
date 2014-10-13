@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   root 'static_pages#index'
 
+  get '/new_de_plume', to: 'users#new_de_plume', as: "new_de_plume"
   get '/desk', to: 'users#desk', as: 'desk'
   get '/desk/publish', to: 'users#publish', as: 'publish_post'
   get '/desk/unpublish', to: 'users#unpublish', as: 'unpublish_post'

@@ -8,11 +8,11 @@
       <% end %>
         <%= link_to post, class: "dont-be-blue" do %>
           <strong class="post-title"><%= post.title %></strong>
-        <% if post.published? %>
-          <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>
-      <% else  %>
-          <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
-      <% end  %>
+      <%#   <% if post.published? %>
+      <%#     <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>
+      <%# <% else  %>
+      <%#     <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
+      <%# <% end  %>
       </div>
       <div class="body">
         <div>

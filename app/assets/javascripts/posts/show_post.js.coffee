@@ -1,6 +1,7 @@
 $ ->
   $("#edit-button").click ->
     $(".show-container").addClass "new-container"
+    $(".show-container").addClass "editing-active"
     $("#save-button").show()
     $("textarea").attr "readonly", false
     window.posts()
