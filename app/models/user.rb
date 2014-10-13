@@ -34,7 +34,8 @@ class User < ActiveRecord::Base
 
     length.times do |i|
       values = dictionary.starting_with(name.to_s[0..length-i])
-      if values.length > 15
+      values.select! { |word| word.length < 8 }
+      if values.length > 10
         random_word = Random.rand(values.length)
         return values[random_word]
       end
