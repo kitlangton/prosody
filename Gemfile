@@ -25,6 +25,7 @@ gem "spring-commands-rspec", group: :development
 gem 'newrelic_rpm'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'devise_invitable', '~> 1.3.4'
+gem "figaro"
 
 group :development, :test do
   gem 'rspec-rails'
