@@ -2,12 +2,12 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :haikus
   has_many :posts
+  after_create :concoct_nom_de_plume
   require 'ruby-dictionary'
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
   after_invitation_accepted :concoct_nom_de_plume
 
   def nom_de_plume_short
