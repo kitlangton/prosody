@@ -91,6 +91,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    magnific-popup-rails (0.9.9)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     mime-types (2.3)
@@ -206,6 +207,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  magnific-popup-rails
   newrelic_rpm
   pg
   rails (= 4.1.6)

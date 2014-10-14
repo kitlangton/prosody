@@ -40,5 +40,14 @@ $ ->
         y: -20
       $(".hidden-controls").children().attr "disabled", false
 
+$ ->
+  $("#inline-popups").magnificPopup
+    delegate: "a"
+    removalDelay: 500 #delay removal by X to allow out-animation
+    mainClass: 'mfp-fade'
+    callbacks:
+      beforeOpen: ->
+        # @st.mainClass = @st.el.attr("data-effect")
+        return
 
-
+    midClick: true # allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.

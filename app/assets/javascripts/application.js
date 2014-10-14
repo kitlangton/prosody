@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.autosize
 //= require foundation
+//= require magnific-popup
 //= require text_stats
 //= require turbolinks
 //= require jquery.transit.min.js

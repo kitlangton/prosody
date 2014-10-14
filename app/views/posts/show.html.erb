@@ -8,8 +8,8 @@
   <div class="show-container small-12 medium-10 large-8 small-centered columns">
   <div class="new-post-body">
     <% if @post.comments.count > 0  %>
-      <div class="post-comments left">
-      <a href="#" id="modal2-click" data-reveal-id="comments-modal">
+      <div class="post-comments left" id="inline-popups">
+      <a href="#test-popup" data-effect="mfp-move-horizontal">
         <%= @post.comments.count %>
       </a>
     </div>
@@ -54,10 +54,10 @@
 </div>
 
 <% if @post.comments.count > 0  %>
-  <div id="comments-modal" class="reveal-modal" data-reveal>
-  <h3>Comments</h3>
-  <%= render @comments  %>
-</div>
+  <div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
+    <h3>Comments</h3>
+    <%= render @comments  %>
+  </div>
 <% end %>
 
 <a href="#" id="modal-click" data-reveal-id="comment-modal" class="dispnone">Click Me For A Modal</a>
