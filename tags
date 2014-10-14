@@ -23,6 +23,7 @@ DeviseCreateUsers	db/migrate/20140930195656_devise_create_users.rb	/^class Devis
 Haiku	app/models/haiku.rb	/^class Haiku < ActiveRecord::Base$/;"	c
 HaikusController	app/controllers/haikus_controller.rb	/^class HaikusController < ApplicationController$/;"	c
 HaikusHelper	app/helpers/haikus_helper.rb	/^module HaikusHelper$/;"	m
+InvitationsController	app/controllers/invitations_controller.rb	/^class InvitationsController < Devise::InvitationsController$/;"	c
 Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
 PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
 PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
@@ -64,6 +65,7 @@ new	app/controllers/posts/comments_controller.rb	/^  def new$/;"	f	class:Comment
 new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
 new_de_plume	app/controllers/users_controller.rb	/^  def new_de_plume$/;"	f	class:UsersController
 nom_de_plume_display	app/models/user.rb	/^  def nom_de_plume_display$/;"	f	class:User
+nom_de_plume_short	app/models/user.rb	/^  def nom_de_plume_short$/;"	f	class:User
 original	app/assets/javascripts/users.js.coffee	/^    original = $(@).text()$/;"	v
 post	app/models/comment.rb	/^  belongs_to :post$/;"	f
 post	app/models/comments.rb	/^  belongs_to :post$/;"	f
@@ -86,7 +88,9 @@ special	app/assets/javascripts/index.js.coffee	/^  special = [$/;"	v
 title	app/models/haiku.rb	/^  def title$/;"	f	class:Haiku
 unpublish	app/controllers/users_controller.rb	/^  def unpublish$/;"	f	class:UsersController
 unpublished	app/models/post.rb	/^  scope :unpublished, -> { where(published_on: nil ) }$/;"	f
+update	app/controllers/invitations_controller.rb	/^  def update$/;"	f	class:InvitationsController
 update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
+update_sanitized_params	app/controllers/invitations_controller.rb	/^  def update_sanitized_params$/;"	f	class:InvitationsController
 user	app/models/comment.rb	/^  belongs_to :user$/;"	f
 user	app/models/comments.rb	/^  belongs_to :user$/;"	f
 user	app/models/haiku.rb	/^  belongs_to :user$/;"	f
