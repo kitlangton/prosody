@@ -22,6 +22,7 @@ class Post < ActiveRecord::Base
   def draft?
     published_on == nil
   end
+
   private
 
   def post_titleize
