@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   before_save :post_titleize
+  before_save :name_haiku
 
   validates :body, presence: true
   validates :title, presence: true
@@ -25,5 +26,12 @@ class Post < ActiveRecord::Base
 
   def post_titleize
     self.title = title.titleize
+  end
+
+  def name_haiku
+    if post_type == "haiku"
+      new_title = body.split[0].capitalize + " " + body.split[-1].capitalize
+      self.title = new_title
+    end
   end
 end

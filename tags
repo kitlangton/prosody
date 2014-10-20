@@ -65,6 +65,7 @@ haikus	app/models/user.rb	/^  has_many :haikus$/;"	f
 index	app/controllers/static_pages_controller.rb	/^  def index$/;"	f	class:StaticPagesController
 insertButton	app/assets/javascripts/posts.js.coffee	/^insertButton = ->$/;"	f
 loading	app/assets/javascripts/users.js.coffee	/^loading = (button) ->$/;"	f
+name_haiku	app/models/post.rb	/^  def name_haiku$/;"	f	class:Post
 new	app/controllers/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
 new	app/controllers/haikus_controller.rb	/^  def new$/;"	f	class:HaikusController
 new	app/controllers/posts/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
