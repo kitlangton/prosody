@@ -10,8 +10,10 @@
   
 </div>
 
-<%= form_for @haiku do |f| %>
-  <%= f.text_area :text, rows: 3, id: "Haiku_Body" %>
+<%= form_for @post do |f| %>
+  <%= f.hidden_field :title, value:"okay"%>
+  <%= f.text_area :body, rows: 3, id: "Haiku_Body" %>
+  <%= f.hidden_field :post_type, value: "haiku" %>
   <%= submit_tag "Submit Haiku", disabled: true, class: "button", id: "haiku-submit" %>
 <% end %>
 

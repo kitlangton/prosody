@@ -1,0 +1,20 @@
+<div class="post-container medium-6 large-6 columns padded-column">
+  <div class="post story prompt">
+    <div class="post-content">
+      <div class="small-12 title">
+        <%= link_to "new_#{prompt.action}".to_sym, class: "dont-be-blue" do %>
+          <strong class="post-title"><em><%= prompt.name.upcase %></em></strong>
+      </div>
+      <div class="body">
+        <div>
+          <% prompt.description.split("\n").each do |line| %>
+            <div class=<%= prompt.action + "-text"%>>
+            <%= line %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
