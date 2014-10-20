@@ -7,7 +7,7 @@
           <em class="user-email"><%= post.user && post.user.nom_de_plume_short %></em>
       <% end %>
         <%= link_to post, class: "dont-be-blue" do %>
-          <strong class="post-title"><%= post.title %></strong>
+          <strong class="post-title"><%= post.body.split[0].capitalize + " " + post.body.split[-1].capitalize %></strong>
       </div>
       <div class="body">
         <% if post.post_type == "haiku"  %>
