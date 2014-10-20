@@ -1,0 +1,25 @@
+<div class="post-container medium-6 large-6 columns padded-column">
+  <div class="post story">
+    <div class="post-content">
+      <div class="small-12 title">
+        <%= link_to haiku.user do %>
+          <em class="user-email"><%= haiku.user && haiku.user.nom_de_plume_short %></em>
+      <% end %>
+        <%= link_to haiku, class: "dont-be-blue" do %>
+          <strong class="haiku-title"><%= haiku.title %></strong>
+      <%#   <% if haiku.published? %>
+      <%#     <em class="date-created"><%= haiku.published_on.strftime("%h %e")  %></em>
+      <%# <% else  %>
+      <%#     <em class="date-created"><%= haiku.created_at.strftime("%h %e")  %></em>
+      <%# <% end  %>
+      </div>
+      <div class="body">
+        <div>
+          <%= haiku.body  %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+    </div>

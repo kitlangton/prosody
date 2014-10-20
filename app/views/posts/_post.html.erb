@@ -1,6 +1,6 @@
-<div class="post-container medium-6 large-6 columns padded-column">
 
-  <div class="post story <%= "draft" unless post.published? %>">
+    <div class="post-container medium-6 large-6 columns padded-column">
+      <div class="post story <%= post.post_type  %> <%= "draft" unless post.published? %>">
     <div class="post-content">
       <div class="small-12 title">
         <%= link_to post.user do %>
@@ -8,19 +8,22 @@
       <% end %>
         <%= link_to post, class: "dont-be-blue" do %>
           <strong class="post-title"><%= post.title %></strong>
-      <%#   <% if post.published? %>
-      <%#     <em class="date-created"><%= post.published_on.strftime("%h %e")  %></em>
-      <%# <% else  %>
-      <%#     <em class="date-created"><%= post.created_at.strftime("%h %e")  %></em>
-      <%# <% end  %>
       </div>
       <div class="body">
+        <% if post.post_type == "haiku"  %>
+          <% post.body.lines.each do |line|  %>
+            <div class="haiku-text">
+              <%= line  %>
+            </div>
+          <% end %>
+        <% else %>
         <div>
           <%= post.body  %>
         </div>
+      <% end %>
       </div>
     </div>
   <% end %>
   </div>
 
-</div>
+    </div>

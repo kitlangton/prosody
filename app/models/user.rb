@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   has_many :posts
   before_create :concoct_nom_de_plume
   require 'ruby-dictionary'
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,

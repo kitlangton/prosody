@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations', invitations: "invitations" }
   resources :comments
   resources :posts
+  resources :prompts
   resources :haikus
   resources :users
   root 'static_pages#index'

@@ -8,5 +8,10 @@
     <% end %>
   </div>
 
+  <% if current_user.admin? %>
+    <div class="">
+      <%= link_to "Prompt", new_prompt_path %>
+    </div>
+  <% end %>
 
 </div>

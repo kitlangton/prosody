@@ -6,7 +6,9 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 APP_PATH	bin/rails	/^APP_PATH = File.expand_path('..\/..\/config\/application',  __FILE__)$/;"	c
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddAdminToUsers	db/migrate/20141020033040_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
 AddNamesToUsers	db/migrate/20141008205025_add_names_to_users.rb	/^class AddNamesToUsers < ActiveRecord::Migration$/;"	c
+AddPostTypeToPosts	db/migrate/20141020031133_add_post_type_to_posts.rb	/^class AddPostTypeToPosts < ActiveRecord::Migration$/;"	c
 AddPublishedOnToPosts	db/migrate/20141004194903_add_published_on_to_posts.rb	/^class AddPublishedOnToPosts < ActiveRecord::Migration$/;"	c
 AddUserReferenceToHaikus	db/migrate/20141001151824_add_user_reference_to_haikus.rb	/^class AddUserReferenceToHaikus < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Prosody
@@ -19,6 +21,7 @@ CommentsController	app/controllers/posts/comments_controller.rb	/^class Comments
 CreateComments	db/migrate/20141013175901_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
 CreateHaikus	db/migrate/20140929192237_create_haikus.rb	/^class CreateHaikus < ActiveRecord::Migration$/;"	c
 CreatePosts	db/migrate/20141003023435_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
+CreatePrompts	db/migrate/20141020033632_create_prompts.rb	/^class CreatePrompts < ActiveRecord::Migration$/;"	c
 DeviseCreateUsers	db/migrate/20140930195656_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
 Haiku	app/models/haiku.rb	/^class Haiku < ActiveRecord::Base$/;"	c
 HaikusController	app/controllers/haikus_controller.rb	/^class HaikusController < ApplicationController$/;"	c
@@ -27,6 +30,7 @@ InvitationsController	app/controllers/invitations_controller.rb	/^class Invitati
 Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
 PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
 PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
+PromptsController	app/controllers/prompts_controller.rb	/^class PromptsController < ApplicationController$/;"	c
 Prosody	config/application.rb	/^module Prosody$/;"	m
 RegistrationsController	app/controllers/registrations_controller.rb	/^class RegistrationsController < Devise::RegistrationsController$/;"	c
 StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
@@ -43,18 +47,20 @@ change	db/migrate/20141003023435_create_posts.rb	/^  def change$/;"	f	class:Crea
 change	db/migrate/20141004194903_add_published_on_to_posts.rb	/^  def change$/;"	f	class:AddPublishedOnToPosts
 change	db/migrate/20141008205025_add_names_to_users.rb	/^  def change$/;"	f	class:AddNamesToUsers
 change	db/migrate/20141013175901_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+change	db/migrate/20141020031133_add_post_type_to_posts.rb	/^  def change$/;"	f	class:AddPostTypeToPosts
+change	db/migrate/20141020033040_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
+change	db/migrate/20141020033632_create_prompts.rb	/^  def change$/;"	f	class:CreatePrompts
 comments	app/models/post.rb	/^  has_many :comments$/;"	f
 comments	app/models/user.rb	/^  has_many :comments$/;"	f
 concoct_nom_de_plume	app/models/user.rb	/^  def concoct_nom_de_plume$/;"	f	class:User
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
-create	app/controllers/haikus_controller.rb	/^  def create$/;"	f	class:HaikusController
 create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
+create	app/controllers/prompts_controller.rb	/^  def create$/;"	f	class:PromptsController
 desk	app/controllers/users_controller.rb	/^  def desk$/;"	f	class:UsersController
 draft?	app/models/post.rb	/^  def draft?$/;"	f	class:Post
 generate_nom_de_plume	app/models/user.rb	/^  def generate_nom_de_plume$/;"	f	class:User
 generate_word_from	app/models/user.rb	/^  def generate_word_from (name)$/;"	f	class:User
 getSelected	app/assets/javascripts/posts.js.coffee	/^getSelected = ->$/;"	f
-haiku_params	app/controllers/haikus_controller.rb	/^  def haiku_params$/;"	f	class:HaikusController
 haikus	app/models/user.rb	/^  has_many :haikus$/;"	f
 index	app/controllers/static_pages_controller.rb	/^  def index$/;"	f	class:StaticPagesController
 insertButton	app/assets/javascripts/posts.js.coffee	/^insertButton = ->$/;"	f
@@ -63,6 +69,7 @@ new	app/controllers/comments_controller.rb	/^  def new$/;"	f	class:CommentsContr
 new	app/controllers/haikus_controller.rb	/^  def new$/;"	f	class:HaikusController
 new	app/controllers/posts/comments_controller.rb	/^  def new$/;"	f	class:CommentsController
 new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
+new	app/controllers/prompts_controller.rb	/^  def new$/;"	f	class:PromptsController
 new_de_plume	app/controllers/users_controller.rb	/^  def new_de_plume$/;"	f	class:UsersController
 nom_de_plume_display	app/models/user.rb	/^  def nom_de_plume_display$/;"	f	class:User
 nom_de_plume_short	app/models/user.rb	/^  def nom_de_plume_short$/;"	f	class:User
@@ -75,6 +82,7 @@ post_titleize	app/models/post.rb	/^  def post_titleize$/;"	f	class:Post
 posts	app/models/user.rb	/^  has_many :posts$/;"	f
 presses	app/assets/javascripts/posts.js.coffee	/^    presses = 0$/;"	v
 presses	app/assets/javascripts/posts.js.coffee	/^  presses = 0$/;"	v
+prompt_params	app/controllers/prompts_controller.rb	/^  def prompt_params$/;"	f	class:PromptsController
 publish	app/controllers/users_controller.rb	/^  def publish$/;"	f	class:UsersController
 publish!	app/models/post.rb	/^  def publish!$/;"	f	class:Post
 published	app/models/post.rb	/^  scope :published, -> { where.not(published_on: nil ) }$/;"	f
