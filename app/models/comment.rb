@@ -6,4 +6,5 @@ class Comment < ActiveRecord::Base
   def author
     user.nom_de_plume
   end
+
 end

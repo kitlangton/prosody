@@ -27,6 +27,7 @@ Haiku	app/models/haiku.rb	/^class Haiku < ActiveRecord::Base$/;"	c
 HaikusController	app/controllers/haikus_controller.rb	/^class HaikusController < ApplicationController$/;"	c
 HaikusHelper	app/helpers/haikus_helper.rb	/^module HaikusHelper$/;"	m
 InvitationsController	app/controllers/invitations_controller.rb	/^class InvitationsController < Devise::InvitationsController$/;"	c
+NomDePlume	lib/nom_de_plume.rb	/^class NomDePlume$/;"	c
 Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
 PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
 PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
@@ -58,11 +59,12 @@ create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsContr
 create	app/controllers/prompts_controller.rb	/^  def create$/;"	f	class:PromptsController
 desk	app/controllers/users_controller.rb	/^  def desk$/;"	f	class:UsersController
 draft?	app/models/post.rb	/^  def draft?$/;"	f	class:Post
-generate_nom_de_plume	app/models/user.rb	/^  def generate_nom_de_plume$/;"	f	class:User
-generate_word_from	app/models/user.rb	/^  def generate_word_from (name)$/;"	f	class:User
+generate	lib/nom_de_plume.rb	/^  def generate$/;"	f	class:NomDePlume
+generate_word_from	lib/nom_de_plume.rb	/^  def generate_word_from (name)$/;"	f	class:NomDePlume
 getSelected	app/assets/javascripts/posts.js.coffee	/^getSelected = ->$/;"	f
 haikus	app/models/user.rb	/^  has_many :haikus$/;"	f
 index	app/controllers/static_pages_controller.rb	/^  def index$/;"	f	class:StaticPagesController
+initialize	lib/nom_de_plume.rb	/^  def initialize(person)$/;"	f	class:NomDePlume
 insertButton	app/assets/javascripts/posts.js.coffee	/^insertButton = ->$/;"	f
 loading	app/assets/javascripts/users.js.coffee	/^loading = (button) ->$/;"	f
 name_haiku	app/models/post.rb	/^  def name_haiku$/;"	f	class:Post

@@ -20,6 +20,9 @@
 //= require jquery.transit.min.js
 //= require jquery.dotdotdot.min
 //= require jquery.infinitescroll
+//= require velocity.min.js
+//= require velocity.ui.js
+//= require jquery.blast
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
