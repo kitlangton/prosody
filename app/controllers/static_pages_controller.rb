@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :require_signin!
+  before_action :authenticate_user!
 
   def index
     @haikus = Haiku.all.order("created_at desc")
